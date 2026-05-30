@@ -1,0 +1,9 @@
+{
+  "name": "staff-work",
+  "version": "1.0.0",
+  "description": "Military-grade thinking tools — BLUF writing, active voice, main effort, pocket estimate, task-purpose",
+  "author": {
+    "name": "Harry Burton",
+    "url": "https://github.com/harry-burton-dev"
+  }
+}
