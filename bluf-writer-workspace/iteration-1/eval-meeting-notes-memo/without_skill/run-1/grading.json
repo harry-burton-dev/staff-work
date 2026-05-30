@@ -1,0 +1,37 @@
+{
+  "eval_id": 1,
+  "eval_name": "meeting-notes-memo",
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "has_memo_headers",
+      "passed": true,
+      "evidence": "Output has 'MEMORANDUM' heading, then 'TO: Brigade Commander', 'FROM: Logistics Working Group', 'SUBJECT:...', 'DATE: 28 May 2026' — all four header fields present"
+    },
+    {
+      "text": "bluf_is_first_section",
+      "passed": false,
+      "evidence": "BLUF appears as a bold paragraph after the headers — not numbered section '1. BLUF.' and the overall structure uses SITUATION/PROBLEM/OPTIONS/RECOMMENDATION headings rather than numbered military paragraphs"
+    },
+    {
+      "text": "bluf_names_combined_approach",
+      "passed": true,
+      "evidence": "BLUF reads: '...dual approach: immediately request emergency resupply from Camp Stanton and issue a FRAGO to reduce vehicle idle time.'"
+    },
+    {
+      "text": "recommendation_has_timeline",
+      "passed": true,
+      "evidence": "Required Actions table lists 'Immediately' for resupply and 'Within 24 hrs' for FRAGO and retraining"
+    },
+    {
+      "text": "addresses_brigade_commander",
+      "passed": true,
+      "evidence": "'TO: Brigade Commander' in memo headers"
+    },
+    {
+      "text": "no_preamble",
+      "passed": true,
+      "evidence": "Output opens directly with 'MEMORANDUM' — no meta-commentary"
+    }
+  ]
+}

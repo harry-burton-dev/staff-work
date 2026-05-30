@@ -1,0 +1,31 @@
+{
+  "eval_id": 2,
+  "eval_name": "policy-recommendation",
+  "prompt": "Rewrite this in BLUF memo format for the CISO: [PAM policy review with 3 findings, £340K remediation, £2.1M penalty risk]",
+  "assertions": [
+    {
+      "name": "has_memo_headers",
+      "description": "Output contains formal memo headers: MEMORANDUM FOR, FROM, DATE, SUBJECT"
+    },
+    {
+      "name": "bluf_is_first_section",
+      "description": "Section 1 is labelled BLUF (not Background, Situation, or any other heading)"
+    },
+    {
+      "name": "bluf_or_rec_mentions_cost",
+      "description": "The BLUF or RECOMMENDATION section mentions £340K (or 340,000)"
+    },
+    {
+      "name": "bluf_or_rec_mentions_risk",
+      "description": "The BLUF or RECOMMENDATION section mentions £2.1M or regulatory penalty"
+    },
+    {
+      "name": "three_findings_present",
+      "description": "Discussion covers all 3 key findings: ~34% unreviewed accounts, 12 service accounts, and ~61% CyberArk coverage"
+    },
+    {
+      "name": "no_preamble",
+      "description": "Output does not begin with 'Here is', 'Below is', 'I've rewritten', or similar meta-commentary"
+    }
+  ]
+}

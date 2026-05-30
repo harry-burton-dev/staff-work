@@ -1,0 +1,31 @@
+{
+  "eval_id": 1,
+  "eval_name": "meeting-notes-memo",
+  "prompt": "Turn these meeting notes into a proper memo I can send up the chain: [Logistics Working Group call re IRON THUNDER fuel crisis]",
+  "assertions": [
+    {
+      "name": "has_memo_headers",
+      "description": "Output contains formal memo headers: MEMORANDUM FOR, FROM, DATE, SUBJECT"
+    },
+    {
+      "name": "bluf_is_first_section",
+      "description": "Section 1 is labelled BLUF (not Background, Situation, or any other heading)"
+    },
+    {
+      "name": "bluf_names_combined_approach",
+      "description": "The BLUF line references both resupply and FRAGO (or marshalling/idle reduction) as the recommended approach"
+    },
+    {
+      "name": "recommendation_has_timeline",
+      "description": "The RECOMMENDATION section mentions at least one time constraint (COB, 72 hours, D+8, or similar)"
+    },
+    {
+      "name": "addresses_brigade_commander",
+      "description": "Memo is addressed to Brigade Commander or equivalent senior recipient"
+    },
+    {
+      "name": "no_preamble",
+      "description": "Output does not begin with 'Here is', 'Below is', 'I've written', or similar meta-commentary"
+    }
+  ]
+}

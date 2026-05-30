@@ -1,0 +1,37 @@
+{
+  "eval_id": 2,
+  "eval_name": "policy-recommendation",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "has_memo_headers",
+      "passed": true,
+      "evidence": "Output starts with 'MEMORANDUM FOR Chief Information Security Officer', 'FROM: Information Security Team', 'DATE: 30 May 2026', 'SUBJECT: Approve £340K PAM Remediation Programme...'"
+    },
+    {
+      "text": "bluf_is_first_section",
+      "passed": true,
+      "evidence": "Section 1 is explicitly labelled '1. BLUF.'"
+    },
+    {
+      "text": "bluf_or_rec_mentions_cost",
+      "passed": true,
+      "evidence": "BLUF reads: '...the IT Risk Committee recommends a £340K, six-month remediation programme...'"
+    },
+    {
+      "text": "bluf_or_rec_mentions_risk",
+      "passed": true,
+      "evidence": "BLUF reads: '...exposing the organisation to up to £2.1M in regulatory penalties...'"
+    },
+    {
+      "text": "three_findings_present",
+      "passed": true,
+      "evidence": "Discussion 3a: '34% of privileged accounts (approximately 288)'; 3b: '12 service accounts retain standing admin privileges'; 3c: 'CyberArk covers only 61% of in-scope systems'"
+    },
+    {
+      "text": "no_preamble",
+      "passed": true,
+      "evidence": "Output opens directly with 'MEMORANDUM FOR' — no meta-commentary"
+    }
+  ]
+}

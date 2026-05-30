@@ -1,0 +1,37 @@
+{
+  "eval_id": 1,
+  "eval_name": "meeting-notes-memo",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "has_memo_headers",
+      "passed": true,
+      "evidence": "Output starts with 'MEMORANDUM FOR Brigade Commander', 'FROM: Col. Harris...', 'DATE: 28 May 2026', 'SUBJECT: Approve Dual-Track Action...'"
+    },
+    {
+      "text": "bluf_is_first_section",
+      "passed": true,
+      "evidence": "Section 1 is explicitly labelled '1. BLUF.'"
+    },
+    {
+      "text": "bluf_names_combined_approach",
+      "passed": true,
+      "evidence": "BLUF reads: '...requiring immediate approval of an emergency resupply request and a FRAGO to reduce vehicle idle time.'"
+    },
+    {
+      "text": "recommendation_has_timeline",
+      "passed": true,
+      "evidence": "Recommendation 4a: 'decision required NLT COB 28 May 2026 to meet the 72-hour lead time'"
+    },
+    {
+      "text": "addresses_brigade_commander",
+      "passed": true,
+      "evidence": "'MEMORANDUM FOR Brigade Commander' — correct recipient"
+    },
+    {
+      "text": "no_preamble",
+      "passed": true,
+      "evidence": "Output opens directly with 'MEMORANDUM FOR' — no meta-commentary"
+    }
+  ]
+}

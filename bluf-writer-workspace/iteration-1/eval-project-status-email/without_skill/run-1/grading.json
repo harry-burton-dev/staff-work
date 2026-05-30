@@ -1,0 +1,37 @@
+{
+  "eval_id": 0,
+  "eval_name": "project-status-email",
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "has_memo_headers",
+      "passed": false,
+      "evidence": "Output uses bold markdown sections (Progress, Vendor, Key risk) — no MEMORANDUM FOR, FROM, DATE, or SUBJECT headers"
+    },
+    {
+      "text": "bluf_is_first_section",
+      "passed": false,
+      "evidence": "BLUF appears as a bold paragraph, not as numbered section '1. BLUF.' — numbered structure not used at all"
+    },
+    {
+      "text": "bluf_surfaces_delay",
+      "passed": true,
+      "evidence": "Bold BLUF line reads: '...go-live moves from 15 June to 6 July...'"
+    },
+    {
+      "text": "bluf_surfaces_action",
+      "passed": true,
+      "evidence": "BLUF line ends with '...leadership sign-off on the revised timeline is required'"
+    },
+    {
+      "text": "recommendation_assigns_owner",
+      "passed": false,
+      "evidence": "'Action required: Leadership must approve the revised timeline.' — no specific name or role assigned as owner"
+    },
+    {
+      "text": "no_preamble",
+      "passed": true,
+      "evidence": "Output opens directly with the bold BLUF line — no meta-commentary"
+    }
+  ]
+}

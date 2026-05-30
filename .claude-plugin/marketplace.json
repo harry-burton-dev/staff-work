@@ -1,0 +1,16 @@
+{
+  "name": "staff-work",
+  "description": "Military-grade thinking tools for Claude Code — planning, writing, and decision-making",
+  "owner": {
+    "name": "Harry Burton",
+    "url": "https://github.com/harry-burton-dev"
+  },
+  "plugins": [
+    {
+      "name": "staff-work",
+      "description": "Military-grade thinking tools: BLUF writing, active voice, main effort, pocket estimate, task-purpose",
+      "version": "1.0.0",
+      "source": "./"
+    }
+  ]
+}

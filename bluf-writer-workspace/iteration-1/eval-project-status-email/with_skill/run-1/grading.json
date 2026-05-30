@@ -1,0 +1,43 @@
+{
+  "eval_id": 0,
+  "eval_name": "project-status-email",
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "has_memo_headers",
+      "passed": true,
+      "evidence": "Output starts with 'MEMORANDUM FOR Leadership Team' then 'FROM: Mike', 'DATE: 29 May 2026', 'SUBJECT: Approve Revised Go-Live Date...'"
+    },
+    {
+      "text": "bluf_is_first_section",
+      "passed": true,
+      "evidence": "Section 1 is explicitly labelled '1. BLUF.'"
+    },
+    {
+      "text": "bluf_surfaces_delay",
+      "passed": true,
+      "evidence": "BLUF reads: '...go-live must shift from 15 June to 6 July minimum...'"
+    },
+    {
+      "text": "bluf_surfaces_action",
+      "passed": true,
+      "evidence": "BLUF ends with '...leadership sign-off on the revised timeline is required.'"
+    },
+    {
+      "text": "recommendation_assigns_owner",
+      "passed": true,
+      "evidence": "Recommendation names 'Leadership', 'Mike', and 'Sarah' with distinct actions each"
+    },
+    {
+      "text": "no_preamble",
+      "passed": true,
+      "evidence": "Output opens directly with 'MEMORANDUM FOR' — no meta-commentary"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "eval_id": 0,
+  "eval_name": "project-status-email",
+  "prompt": "BLUF this for me: [rambling PM email burying 3-week go-live delay and leadership sign-off requirement]",
+  "assertions": [
+    {
+      "name": "has_memo_headers",
+      "description": "Output contains formal memo headers: MEMORANDUM FOR, FROM, DATE, SUBJECT"
+    },
+    {
+      "name": "bluf_is_first_section",
+      "description": "Section 1 is labelled BLUF (not Background, Situation, or any other heading)"
+    },
+    {
+      "name": "bluf_surfaces_delay",
+      "description": "The BLUF line mentions the delay (6 July, 3 weeks, or go-live date)"
+    },
+    {
+      "name": "bluf_surfaces_action",
+      "description": "The BLUF line mentions leadership sign-off, approval, or decision required"
+    },
+    {
+      "name": "recommendation_assigns_owner",
+      "description": "The RECOMMENDATION section names a specific person or role responsible for action"
+    },
+    {
+      "name": "no_preamble",
+      "description": "Output does not begin with 'Here is', 'Below is', 'I've rewritten', or similar meta-commentary"
+    }
+  ]
+}
