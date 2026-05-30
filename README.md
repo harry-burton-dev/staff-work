@@ -27,18 +27,6 @@ A curated collection of [Claude Code](https://claude.ai/code) skills that apply 
 
 ## Installation
 
-### Via Superpowers (recommended)
-
-Add this repo as a toolkit in your Superpowers plugin configuration:
-
-```json
-{
-  "toolkits": ["harry-burton-dev/staff-work"]
-}
-```
-
-### Manual
-
 Clone the repo and copy any `SKILL.md` into your Claude Code skills directory, or reference it from your project's `.claude/` config:
 
 ```bash
@@ -61,11 +49,6 @@ Once installed, Claude Code will automatically detect and apply skills when you 
 
 ---
 
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add a skill, choose a category, and meet the quality bar before submitting a PR.
-
----
 
 ## License
 
